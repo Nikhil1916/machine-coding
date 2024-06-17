@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
 import explorer from '../data/data';
 import FileExplorer from './FileExplorer';
+import useTraverse from '../hooks/useTraverse';
 
 const Body = () => {
   const [FileExplorerD, setFileExplorerD] = useState(explorer);
+  const { insertNode } = useTraverse();
+  const handleAdd = (folderId,item,isFolder) => {
+    return insertNode(FileExplorerD, folderId,item,isFolder)
+  }
   return (
     <div className='ml-1'>
-        <FileExplorer data={FileExplorerD} />
+        <FileExplorer handleAdd={handleAdd} data={FileExplorerD} />
     </div>
   )
 }

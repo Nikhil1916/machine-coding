@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FileExplorer = ({ data }) => {
+const FileExplorer = ({handleAdd, data }) => {
   const [expand, setExpand] = useState(false);
   const [showInput, setShowInput] = useState({
     isVisible: false,
@@ -19,13 +19,13 @@ const FileExplorer = ({ data }) => {
 
   const onAdd = (e) =>{
     if(e.keyCode===13 && e.target.value) {
-        // console.log("ok", data);
-        data.items.push({
-            items:[],
-            id: Date.now(),
-            isFolder: showInput.isFolder,
-            name: e.target.value
-        })
+        // data.items.push({
+        //     items:[],
+        //     id: Date.now(),
+        //     isFolder: showInput.isFolder,
+        //     name: e.target.value
+        // })
+        handleAdd(data.id, e.target.value, showInput.isFolder)
         setShowInput({
             isVisible:false
         });
@@ -82,7 +82,7 @@ const FileExplorer = ({ data }) => {
               className={`ml-1 cursor-pointer ${expand ? "block" : "hidden"}`}
               key={item?.id}
             >
-              <FileExplorer data={item} />{" "}
+              <FileExplorer handleAdd={handleAdd} data={item} />{" "}
             </div>
           ) : (
             <span
