@@ -1,9 +1,28 @@
 import './App.css';
-import Body from './Components/Body';
+import FileExplorerBody from './Components/FileExplorerBody';
+import {RouterProvider, createBrowserRouter} from "react-router-dom";
+import MachineCoding from './Components/MachineCoding';
+import Pagination from './Components/Pagination/Pagination';
+
+const app = createBrowserRouter([
+  {
+    path:'/',
+    element: <MachineCoding/>,
+  },
+  {
+    path:'/file-explorer',
+    element: <FileExplorerBody/>
+  },
+  {
+    path:'/Pagination',
+    element:<Pagination/>
+  }
+
+])
 
 function App() {
   return (
-    <Body/>
+    <RouterProvider router={app}/>
   );
 }
 

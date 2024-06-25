@@ -3,7 +3,7 @@ import explorer from '../data/data';
 import FileExplorer from './FileExplorer';
 import useTraverse from '../hooks/useTraverse';
 
-const Body = () => {
+const FileExplorerBody = () => {
   const [FileExplorerD, setFileExplorerD] = useState(explorer);
   const { insertNode } = useTraverse();
   const handleAdd = (folderId,item,isFolder) => {
@@ -16,4 +16,4 @@ const Body = () => {
   )
 }
 
-export default Body
+export default FileExplorerBody

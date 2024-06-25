@@ -1,3 +1,5 @@
+/* //folder  */
+/* folder starts */
 .folder {
  background-color: rgb(233,233,233);
  display: flex;
@@ -46,3 +48,4 @@
 .mt-1 {
   margin-top: 0.5rem;
 }
+/* folder ends */

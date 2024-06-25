@@ -1,0 +1,19 @@
+.pagination {
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination>span {
+    padding: 15px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.gray {
+    background-color: gray;
+}
+
+.hide {
+    display: none;
+}
