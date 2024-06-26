@@ -8,6 +8,7 @@ const MachineCoding = () => {
         <ol>
             <Link to={"/file-explorer"}><li>File Explorer</li></Link>
             <Link to={"/Pagination"}><li>Pagination</li></Link>
+            <Link to={"/Progress"}><li>Progress</li></Link>
         </ol>
     </div>
   )
