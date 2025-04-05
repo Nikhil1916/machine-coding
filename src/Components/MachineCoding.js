@@ -12,6 +12,8 @@ const MachineCoding = () => {
 
             {/* least recently used cache */}
             <Link to={"/LruCache"}><li>LruCache</li></Link>
+
+            <Link to={"/selfThemeToggler"}><li>ThemeToggle</li></Link>
         </ol>
     </div>
   )

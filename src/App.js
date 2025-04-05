@@ -5,6 +5,7 @@ import MachineCoding from './Components/MachineCoding';
 import Pagination from './Components/Pagination/Pagination';
 import ProgressBar from './Components/ProgressBar/ProgressBar';
 import LruCache from './Components/LruCache/LruCache';
+import ThemeToggle from "./Components/ThemeToggle";
 
 const app = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const app = createBrowserRouter([
   {
     path:'/LruCache',
     element: <LruCache/>
+  },
+  {
+    path: '/selfThemeToggler',
+    element: <ThemeToggle/>
   }
 
 ])

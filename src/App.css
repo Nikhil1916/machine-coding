@@ -49,3 +49,40 @@
   margin-top: 0.5rem;
 }
 /* folder ends */
+
+
+
+/* theme toggle */
+/* styles.css or App.css */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  color: #333;
+  font-weight: 600;
+}
+
+.dark .theme-toggle-btn {
+  background-color: #333;
+  color: #fff;
+}
+
+/* theme toggle ends */
