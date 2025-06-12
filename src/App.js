@@ -6,6 +6,7 @@ import Pagination from './Components/Pagination/Pagination';
 import ProgressBar from './Components/ProgressBar/ProgressBar';
 import LruCache from './Components/LruCache/LruCache';
 import ThemeToggle from "./Components/ThemeToggle";
+import { ConfigUI } from './Components/configDrivenUI/ConfigUi';
 
 const app = createBrowserRouter([
   {
@@ -31,7 +32,11 @@ const app = createBrowserRouter([
   {
     path: '/selfThemeToggler',
     element: <ThemeToggle/>
-  }
+  },
+   {
+    path: "/configUi",
+    element: <ConfigUI/>
+   }
 
 ])
 

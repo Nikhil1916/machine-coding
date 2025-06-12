@@ -1,7 +1,10 @@
 import { useRef } from "react";
 
 class LruCache {
-    head;tail;cache;capacity;
+    head;
+    tail;
+    cache;
+    capacity;
     constructor(capacity) {
         this.capacity = capacity;
         this.cache = {};
@@ -13,9 +16,12 @@ class LruCache {
         if(key in this.cache && this.cache[key]) {
             this.cache[key].value = value;
             //move to front
+            console.log("From Cache");
             this.moveToFront(key);
         } else {
-            if(Object.keys(this.cache).length == this.capacity) {
+            console.log("Addd",Object.keys(this.cache).length, this.capacity);
+            if(Object.keys(this.cache).length >= this.capacity) {
+                console.log("remove");
                 this.removeLast();
             }
             this.addToFront(key, value);
@@ -23,6 +29,7 @@ class LruCache {
     }
 
     get(key) {
+        console.log(Object.keys(this.cache));
         if(key in this.cache && this.cache[key]) {
             this.moveToFront(key);
             return this.cache[key].value;
@@ -96,7 +103,9 @@ const useLRU = (capacity) => {
     const cacheRef = useRef(new LruCache(capacity));
 
     return {
-        get:(key)=>cacheRef.current.get(key),
+        get:(key)=>{
+            return cacheRef.current.get(key)
+        },
         put:(key, value)=>cacheRef.current.put(key,value)
     }
 }

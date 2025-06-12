@@ -14,6 +14,7 @@ const MachineCoding = () => {
             <Link to={"/LruCache"}><li>LruCache</li></Link>
 
             <Link to={"/selfThemeToggler"}><li>ThemeToggle</li></Link>
+            <Link to={"/configUi"}><li>Config Ui</li></Link>
         </ol>
     </div>
   )
