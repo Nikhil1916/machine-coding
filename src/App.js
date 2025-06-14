@@ -7,6 +7,7 @@ import ProgressBar from './Components/ProgressBar/ProgressBar';
 import LruCache from './Components/LruCache/LruCache';
 import ThemeToggle from "./Components/ThemeToggle";
 import { ConfigUI } from './Components/configDrivenUI/ConfigUi';
+import InfiniteScroll from './Components/InfiniteScroll/InfiniteScroll';
 
 const app = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const app = createBrowserRouter([
    {
     path: "/configUi",
     element: <ConfigUI/>
+   },
+   {
+    path:"/InfiniteScroll",
+    element: <InfiniteScroll/>
    }
 
 ])
