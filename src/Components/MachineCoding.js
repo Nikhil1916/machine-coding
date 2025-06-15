@@ -16,6 +16,7 @@ const MachineCoding = () => {
             <Link to={"/selfThemeToggler"}><li className='m-2 text-blue-500'>ThemeToggle</li></Link>
             <Link to={"/configUi"}><li className='m-2 text-blue-500'>Config Ui</li></Link>
             <Link to={"/InfiniteScroll"}><li className='m-2 text-blue-500'>Infinite Scroll</li></Link>
+            <Link to={"/Accordian"}><li className='m-2 text-blue-500'>Accordian</li></Link>
             
         </ol>
     </div>

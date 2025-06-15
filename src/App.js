@@ -8,6 +8,7 @@ import LruCache from './Components/LruCache/LruCache';
 import ThemeToggle from "./Components/ThemeToggle";
 import { ConfigUI } from './Components/configDrivenUI/ConfigUi';
 import InfiniteScroll from './Components/InfiniteScroll/InfiniteScroll';
+import Accordian from './Components/Accordian/Accordian';
 
 const app = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const app = createBrowserRouter([
    {
     path:"/InfiniteScroll",
     element: <InfiniteScroll/>
+   },
+   {
+    path: "/Accordian",
+    element: <Accordian/>
    }
 
 ])
