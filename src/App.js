@@ -9,46 +9,61 @@ import ThemeToggle from "./Components/ThemeToggle";
 import { ConfigUI } from './Components/configDrivenUI/ConfigUi';
 import InfiniteScroll from './Components/InfiniteScroll/InfiniteScroll';
 import Accordian from './Components/Accordian/Accordian';
+import ImageSlider from './Components/ImageSlider/ImageSlider';
 
-const app = createBrowserRouter([
+export const routes = [
   {
     path:'/',
     element: <MachineCoding/>,
   },
   {
     path:'/file-explorer',
-    element: <FileExplorerBody/>
+    element: <FileExplorerBody/>,
+    name: "File Explorer"
   },
   {
     path:'/Pagination',
-    element:<Pagination/>
+    element:<Pagination/>,
+    name: "Pagination"
   },
   {
     path:'/Progress',
-    element:<ProgressBar/>
+    element:<ProgressBar/>,
+    name: "Progress"
   },
   {
     path:'/LruCache',
-    element: <LruCache/>
+    element: <LruCache/>,
+    name: "Lru Cache"
   },
   {
     path: '/selfThemeToggler',
-    element: <ThemeToggle/>
+    element: <ThemeToggle/>,
+    name: "Theme Toggle"
   },
    {
     path: "/configUi",
-    element: <ConfigUI/>
+    element: <ConfigUI/>,
+    name: "Config Ui"
    },
    {
     path:"/InfiniteScroll",
-    element: <InfiniteScroll/>
+    element: <InfiniteScroll/>,
+    name: "Infinite Scroll"
    },
    {
     path: "/Accordian",
-    element: <Accordian/>
+    element: <Accordian/>,
+    name: "Accoridan"
+   },
+   {
+    path:"/ImageSlider",
+    element: <ImageSlider/>, 
+    name: "Image Slider"
    }
 
-])
+];
+const app = createBrowserRouter(routes);
 
 function App() {
   return (
