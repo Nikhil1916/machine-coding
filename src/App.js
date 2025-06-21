@@ -10,6 +10,7 @@ import { ConfigUI } from './Components/configDrivenUI/ConfigUi';
 import InfiniteScroll from './Components/InfiniteScroll/InfiniteScroll';
 import Accordian from './Components/Accordian/Accordian';
 import ImageSlider from './Components/ImageSlider/ImageSlider';
+import Comments from './Components/RedditNestedComments/Comments';
 
 export const routes = [
   {
@@ -60,6 +61,11 @@ export const routes = [
     path:"/ImageSlider",
     element: <ImageSlider/>, 
     name: "Image Slider"
+   },
+   {
+    path:"/NestedComments",
+    element: <Comments/>,
+    name: "Nested Comments"
    }
 
 ];
