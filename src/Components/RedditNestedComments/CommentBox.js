@@ -1,6 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const CommentBox = ({ data }) => {
+  const [expanded, setExpanded] = useState({});
+  useEffect(() => {
+    const initialExpanded = {};
+    const populateExpanded = (comments) => {
+      comments?.forEach((_) => {
+        initialExpanded[_.id] = true;
+        if (_.replies) {
+          populateExpanded(_.replies);
+        }
+      });
+    };
+
+    populateExpanded(data);
+    setExpanded(initialExpanded);
+  }, []);
+  const hideReplies = (e, id) => {
+    // e.stopPropagation();
+    // console.log(
+    //   id,
+    //   data?.find((_) => _.id == id)
+    // );
+    setExpanded((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
   return data?.map((comments) => {
     return (
       <div className="p-2 border-black border-l-2 ml-2 mt-2">
@@ -9,9 +35,24 @@ const CommentBox = ({ data }) => {
           <div className="ml-2">
             <p>{comments.username}</p>
             <p>{comments.comment}</p>
+            <p>{"id:" + comments.id}</p>
           </div>
+          <p style={{
+            cursor: "pointer"
+          }}
+            onClick={(e) => {
+              hideReplies(e, comments.id);
+            }}
+          >
+            {comments.replies && (expanded[comments.id] 
+              ? "Hide Replies"
+              : "Show Replies")}
+            
+          </p>
         </div>
-        {comments.replies && <CommentBox data={comments.replies} />}
+        {comments.replies && expanded[comments.id] && (
+          <CommentBox data={comments.replies} />
+        )}
       </div>
     );
   });
