@@ -11,6 +11,7 @@ import InfiniteScroll from './Components/InfiniteScroll/InfiniteScroll';
 import Accordian from './Components/Accordian/Accordian';
 import ImageSlider from './Components/ImageSlider/ImageSlider';
 import Comments from './Components/RedditNestedComments/Comments';
+import Dashboard from './Components/Pagination2/Dashboard';
 
 export const routes = [
   {
@@ -66,6 +67,11 @@ export const routes = [
     path:"/NestedComments",
     element: <Comments/>,
     name: "Nested Comments"
+   },
+   {
+    path:'/pagination-namaste-dev',
+    element:<Dashboard/>,
+    name: "Namaste Pagination"
    }
 
 ];
