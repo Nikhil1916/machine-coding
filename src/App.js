@@ -12,6 +12,7 @@ import Accordian from './Components/Accordian/Accordian';
 import ImageSlider from './Components/ImageSlider/ImageSlider';
 import Comments from './Components/RedditNestedComments/Comments';
 import Dashboard from './Components/Pagination2/Dashboard';
+import LiveChat from './Components/LiveChat/LiveChat';
 
 export const routes = [
   {
@@ -72,6 +73,11 @@ export const routes = [
     path:'/pagination-namaste-dev',
     element:<Dashboard/>,
     name: "Namaste Pagination"
+   },
+   {
+    path: '/LiveChat',
+    element: <LiveChat/>,
+    name : "Youtube Live Chat"
    }
 
 ];
