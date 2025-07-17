@@ -13,6 +13,7 @@ import ImageSlider from './Components/ImageSlider/ImageSlider';
 import Comments from './Components/RedditNestedComments/Comments';
 import Dashboard from './Components/Pagination2/Dashboard';
 import LiveChat from './Components/LiveChat/LiveChat';
+import SearchBar from './Components/SearchBar/SearchBar';
 
 export const routes = [
   {
@@ -78,6 +79,11 @@ export const routes = [
     path: '/LiveChat',
     element: <LiveChat/>,
     name : "Youtube Live Chat"
+   },
+   {
+    path: '/SearchBar',
+    element: <SearchBar/>,
+    name : "Googe Search Bar"
    }
 
 ];
