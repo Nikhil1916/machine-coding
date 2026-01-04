@@ -14,6 +14,7 @@ import Comments from './Components/RedditNestedComments/Comments';
 import Dashboard from './Components/Pagination2/Dashboard';
 import LiveChat from './Components/LiveChat/LiveChat';
 import SearchBar from './Components/SearchBar/SearchBar';
+import Test from './Components/learnersbucket/Toggle/Test';
 
 export const routes = [
   {
@@ -84,6 +85,11 @@ export const routes = [
     path: '/SearchBar',
     element: <SearchBar/>,
     name : "Googe Search Bar"
+   },
+   {
+    path:'/toggle',
+    element: <Test/>,
+    name: "learners bucket toggle"
    }
 
 ];
