@@ -15,6 +15,7 @@ import Dashboard from './Components/Pagination2/Dashboard';
 import LiveChat from './Components/LiveChat/LiveChat';
 import SearchBar from './Components/SearchBar/SearchBar';
 import Test from './Components/learnersbucket/Toggle/Test';
+import ScrollIndicator from './Components/learnersbucket/ScrollIndicator/ScrollIndicator';
 
 export const routes = [
   {
@@ -90,7 +91,13 @@ export const routes = [
     path:'/toggle',
     element: <Test/>,
     name: "learners bucket toggle"
-   }
+   },
+   {
+    path:'/scrollIndicator',
+    element: <ScrollIndicator/>,
+    name: "learners scroll indicator"
+   },
+   
 
 ];
 const app = createBrowserRouter(routes);
