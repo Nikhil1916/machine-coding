@@ -1,0 +1,32 @@
+.wrapperAccordian {
+    padding: 5px 10px;
+}
+
+.toggler {
+    /* position: relative; */
+    background-color: #f9f9f9;
+    width: 100%;
+    text-align: left;
+}
+
+.toggler:after {
+    content: "\02795";
+    position: absolute;
+    right: 10px;
+}
+
+.toggler.active:after {
+      content: "\2796";
+}
+
+
+.panel {
+    opacity: 0;
+      background-color: #90a4ae;
+    transition: 0.4s;
+    padding: 10px;
+}
+
+.panel.active {
+    opacity: 1;
+}

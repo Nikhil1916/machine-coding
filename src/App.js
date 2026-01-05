@@ -16,6 +16,7 @@ import LiveChat from './Components/LiveChat/LiveChat';
 import SearchBar from './Components/SearchBar/SearchBar';
 import Test from './Components/learnersbucket/Toggle/Test';
 import ScrollIndicator from './Components/learnersbucket/ScrollIndicator/ScrollIndicator';
+import AccordionTest from './Components/learnersbucket/Accordian/AccordianTest';
 
 export const routes = [
   {
@@ -96,6 +97,11 @@ export const routes = [
     path:'/scrollIndicator',
     element: <ScrollIndicator/>,
     name: "learners scroll indicator"
+   },
+   {
+    path:'/accordian-learnerbucker',
+    element: <AccordionTest/>,
+    name: "learners Accordian"
    },
    
 
