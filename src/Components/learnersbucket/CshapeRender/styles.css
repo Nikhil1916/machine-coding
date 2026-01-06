@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --square-size:100px;
+}
+
+.square {
+    width: var(--square-size);
+    height: var(--square-size);
+    border: 1px solid black;
+}
+
+.box-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.square.green {
+    background-color: green;
+}
+
+.square:first-child, .square:last-child {
+    margin-left: var(--square-size);
+}

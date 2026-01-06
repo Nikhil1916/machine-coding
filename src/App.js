@@ -17,6 +17,7 @@ import SearchBar from './Components/SearchBar/SearchBar';
 import Test from './Components/learnersbucket/Toggle/Test';
 import ScrollIndicator from './Components/learnersbucket/ScrollIndicator/ScrollIndicator';
 import AccordionTest from './Components/learnersbucket/Accordian/AccordianTest';
+import CShapeRender from './Components/learnersbucket/CshapeRender/CShapeRender';
 
 export const routes = [
   {
@@ -103,7 +104,11 @@ export const routes = [
     element: <AccordionTest/>,
     name: "learners Accordian"
    },
-   
+   {
+    path:"/cshape",
+    element: <CShapeRender/>,
+    name: "C shape learners bucket"
+   }
 
 ];
 const app = createBrowserRouter(routes);
