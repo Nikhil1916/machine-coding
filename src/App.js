@@ -18,6 +18,7 @@ import Test from './Components/learnersbucket/Toggle/Test';
 import ScrollIndicator from './Components/learnersbucket/ScrollIndicator/ScrollIndicator';
 import AccordionTest from './Components/learnersbucket/Accordian/AccordianTest';
 import CShapeRender from './Components/learnersbucket/CshapeRender/CShapeRender';
+import ModalTest from './Components/learnersbucket/Modal/ModalTest';
 
 export const routes = [
   {
@@ -108,6 +109,11 @@ export const routes = [
     path:"/cshape",
     element: <CShapeRender/>,
     name: "C shape learners bucket"
+   },
+      {
+    path:"/Modal",
+    element: <ModalTest/>,
+    name: "learners bucket Modal"
    }
 
 ];

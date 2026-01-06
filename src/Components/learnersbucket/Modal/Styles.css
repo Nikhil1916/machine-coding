@@ -1,0 +1,32 @@
+.modal-backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+    top: 0;
+    left: 0;
+}
+
+.modal-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    box-shadow: 0px 2px 6px #000;
+    padding: 10px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 500px;
+    transform: translate(-50%, -50%);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.modal-close {
+    cursor: pointer;
+    text-align: center;
+}
