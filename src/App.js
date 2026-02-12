@@ -19,6 +19,8 @@ import ScrollIndicator from './Components/learnersbucket/ScrollIndicator/ScrollI
 import AccordionTest from './Components/learnersbucket/Accordian/AccordianTest';
 import CShapeRender from './Components/learnersbucket/CshapeRender/CShapeRender';
 import ModalTest from './Components/learnersbucket/Modal/ModalTest';
+import { element } from 'prop-types';
+import TicTacToe from './Components/TicTacToe/Main';
 
 export const routes = [
   {
@@ -114,6 +116,12 @@ export const routes = [
     path:"/Modal",
     element: <ModalTest/>,
     name: "learners bucket Modal"
+   },
+
+   {
+    path:"/ticTacToe",
+    element: <TicTacToe/>,
+    name: "Tic Tac Toe"
    }
 
 ];
