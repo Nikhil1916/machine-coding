@@ -1,0 +1,14 @@
+:root {
+    --color-primary: red;
+    --background-color: blue;
+}
+
+[data-theme="dark"] {
+    --color-primary: blue;
+    --background-color: red;
+} 
+
+.dark-light-container {
+    background-color: var(--background-color) !important;
+    color: var(--color-primary) !important;
+}

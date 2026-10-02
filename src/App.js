@@ -21,6 +21,10 @@ import CShapeRender from './Components/learnersbucket/CshapeRender/CShapeRender'
 import ModalTest from './Components/learnersbucket/Modal/ModalTest';
 import { element } from 'prop-types';
 import TicTacToe from './Components/TicTacToe/Main';
+import DarkLight from './Components/darkLight/DarkLight';
+import { ThemeProvider } from './Components/darkLight/useThemept';
+import CustomUseEffect from './Components/CustomUseEffect/CustomUseEffect';
+import CustomUseMemo from './Components/CustomUseMemo/CustomeUseMemo';
 
 export const routes = [
   {
@@ -122,6 +126,21 @@ export const routes = [
     path:"/ticTacToe",
     element: <TicTacToe/>,
     name: "Tic Tac Toe"
+   },
+   {
+    path:"/darkLight",
+    element: <ThemeProvider><DarkLight/></ThemeProvider>,
+    name: "Dark Light"
+   },
+   {
+    path:"/customuseEffect",
+    element: <CustomUseEffect/>,
+    name: "Custom useEffect"
+   },
+   {
+    path:"/customuseMemo",
+    element: <CustomUseMemo/>,
+    name: "Custom useMemo"
    }
 
 ];

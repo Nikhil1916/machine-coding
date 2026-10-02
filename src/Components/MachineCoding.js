@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { routes } from '../App'
+import { ThemeProvider } from './darkLight/useThemept'
 
 const MachineCoding = () => {
   return (
+    // <ThemeProvider>
     <div>
         <h1 className='m-2 font-bold'>List of React Machine Coding Ques</h1>
         {/* <ol>
@@ -33,6 +35,7 @@ const MachineCoding = () => {
          
 
     </div>
+    // </ThemeProvider>
   )
 }
 

@@ -22,7 +22,7 @@
 
 .panel {
     opacity: 0;
-      background-color: #90a4ae;
+    background-color: #90a4ae;
     transition: 0.4s;
     padding: 10px;
 }

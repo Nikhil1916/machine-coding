@@ -1,20 +1,19 @@
 import { useState } from "react";
 import Square from "./Square";
 
-const Board = () => {
-    const [squares, setSquares] = useState(Array(9).fill(null));
-    const [toggle, setToggle] = useState(false);
+const Board = ({squares, isX, handlePlay}) => {
     const [isWinner, setIsWinner] = useState();
     const handleClick = (i) => {
         if(squares[i] || checkWinner(squares)) return;
         const squareCopy = squares.slice();
-        if(toggle) {
+        if(isX) {
             squareCopy[i] = "X"
         } else {
             squareCopy[i] = "O"
         }
-        setSquares(squareCopy);
-        setToggle(!toggle);
+        // setSquares(squareCopy);
+        handlePlay(squareCopy);
+        // setIsX(!isX);
         checkWinner(squareCopy);
     }
 
@@ -39,6 +38,7 @@ const Board = () => {
     }
     return (
         <>
+        {!isWinner && <p>Next is {isX ? "X" : "O"}</p>}
         {isWinner && <p>Winner is {isWinner}</p>}
         <div className="board-container">
             <div className="row">
