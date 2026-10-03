@@ -25,6 +25,8 @@ import DarkLight from './Components/darkLight/DarkLight';
 import { ThemeProvider } from './Components/darkLight/useThemept';
 import CustomUseEffect from './Components/CustomUseEffect/CustomUseEffect';
 import CustomUseMemo from './Components/CustomUseMemo/CustomeUseMemo';
+import CustomHooks from './Components/Customhooks/CustomHooks';
+import Fetch from './Components/Customhooks/Fetch';
 
 export const routes = [
   {
@@ -141,6 +143,18 @@ export const routes = [
     path:"/customuseMemo",
     element: <CustomUseMemo/>,
     name: "Custom useMemo"
+   },
+   {
+    path: "/customhooks",
+    element: <CustomHooks/>,
+    name: "Custom Hooks"
+   },
+   {
+    path:'/customFetch',
+    element: <Fetch/>,
+    name: "Custom Fetch"
+   },
+   {
    }
 
 ];
