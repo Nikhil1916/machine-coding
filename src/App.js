@@ -27,6 +27,8 @@ import CustomUseEffect from './Components/CustomUseEffect/CustomUseEffect';
 import CustomUseMemo from './Components/CustomUseMemo/CustomeUseMemo';
 import CustomHooks from './Components/Customhooks/CustomHooks';
 import Fetch from './Components/Customhooks/Fetch';
+import LocalStorage from './Components/Customhooks/LocalStorage';
+import IntersectionObserver from './Components/Customhooks/IntersectionObserver';
 
 export const routes = [
   {
@@ -155,6 +157,14 @@ export const routes = [
     name: "Custom Fetch"
    },
    {
+    path:"/localstorage",
+    element: <LocalStorage/>,
+    name: "Local Storage"
+   },
+   {
+    path:"/intersection-observer",
+    element: <IntersectionObserver/>,
+    name: "Intersection Observer"
    }
 
 ];
